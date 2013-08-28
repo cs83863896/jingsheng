@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.jingsheng.bean.Item" table="ITEM" >
+		<id name="itemId" type="java.lang.Integer" column="itemId">
+			<generator class="increment" />
+		</id>
+		<property name="itemNo" type="java.lang.String" column="itemNo" length="30"/>
+		<property name="itemName" type="java.lang.String" column="itemName" length="30"/>
+		<property name="itemNum" type="java.lang.Integer" column="itemNum" />
+		<property name="itemPrice" type="java.math.BigDecimal" column="itemPrice" />
+		<property name="itemVendor" type="java.lang.String" column="itemVendor" length="30" />
+		<property name="itemCategory" type="java.lang.String" column="itemCategory" length="30" />
+		<property name="itemModel" type="java.lang.String" column="itemModel" length="30" />
+		<property name="itemCreateUser" type="java.lang.String" column="itemCreateUser" length="30" />
+		<property name="itemCreateDate" type="java.lang.String" column="itemCreateDate" />
+		<property name="itemUpdUser" type="java.lang.String" column="itemUpdUser" length="30" />
+		<property name="itemUpdDate" type="java.lang.String" column="itemUpdDate" />
+	</class>
+</hibernate-mapping>
