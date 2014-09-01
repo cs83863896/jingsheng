@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="user" extends="struts-default" namespace="/">
+		<action name="loginUser" class="loginUserAction">
+			<result name="success">/page/common/index.jsp</result>
+			<result name="input" >/page/common/login.jsp</result>
+		</action>
+		<action name="saveUser" class="saveUserAction">
+			<result name="success">/page/admin/adminMain.jsp</result>
+			<result name="input">/page/admin/adminMain.jsp</result>
+		</action>
+		<action name="logoutUser" class="logoutUserAction">
+			<result>/page/common/login.jsp</result>
+		</action>
+	</package>
+	<package name="item" extends="struts-default" namespace="/">
+		<action name="saveItem" class="saveItemAction">
+			<result name="success" type="redirect">/listItem.action</result>
+		</action>
+		<action name="saveCategory" class="saveCategoryAction">
+			<result name="success" type="redirect">/listItem.action</result>
+			<result name="input">/page/purchase/purAddCategory.jsp</result>
+		</action>
+		<action name="listItem" class="listItemAction">
+			<result name="success">/page/purchase/purMain.jsp</result>
+		</action>
+		<action name="getAllCategoryForVendor" class="getAllCategoryActionForVendor">
+			<result name="success">/page/purchase/purAddVendor.jsp</result>
+		</action>
+		<action name="getAllCategoryForEdit" class="getAllCategoryActionForEdit">
+			<result name="success">/page/purchase/purShowAllCategory.jsp</result>
+		</action>
+		<action name="saveVendor" class="saveVendorAction">
+			<result name="success" type="redirect">/listItem.action</result>
+			<result name="input">/page/purchase/purAddVendor.jsp</result>
+		</action>
+		<action name="getVendor" class="getVendorAction">
+			<result name="success">/page/purchase/purAddItem.jsp</result>
+		</action>
+		<action name="getItemById" class="getItemByIdAction">
+			<result name="success">/page/purchase/purUpdItem.jsp</result>
+		</action>
+		<action name="deleteItem" class="deleteItemAction">
+			<result name="success" type="redirect">/listItem.action</result>
+		</action>
+		<action name="updateItem" class="updateItemAction">
+			<result name="success" type="redirect">/listItem.action</result>
+		</action>
+	</package>
+</struts>
